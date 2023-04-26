@@ -47,7 +47,7 @@ from Controller.UserController import UserController
 
 user_route = Blueprint("user_route",__name__)
 
-@user_route.route('/')
+@user_route.route('/', methods=['GET'])
 def index():
     controller = UserController()
     controller.helloUser()
